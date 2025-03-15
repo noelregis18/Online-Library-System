@@ -1,56 +1,48 @@
-# camelcase [![Build Status](https://travis-ci.org/sindresorhus/camelcase.svg?branch=master)](https://travis-ci.org/sindresorhus/camelcase)
+# decamelize [![Build Status](https://travis-ci.org/sindresorhus/decamelize.svg?branch=master)](https://travis-ci.org/sindresorhus/decamelize)
 
-> Convert a dash/dot/underscore/space separated string to camelCase: `foo-bar` → `fooBar`
+> Convert a camelized string into a lowercased one with a custom separator<br>
+> Example: `unicornRainbow` → `unicorn_rainbow`
 
 
 ## Install
 
-```sh
-$ npm install --save camelcase
+```
+$ npm install --save decamelize
 ```
 
 
 ## Usage
 
 ```js
-var camelCase = require('camelcase');
+const decamelize = require('decamelize');
 
-camelCase('foo-bar');
-//=> fooBar
+decamelize('unicornRainbow');
+//=> 'unicorn_rainbow'
 
-camelCase('foo_bar');
-//=> fooBar
-
-camelCase('Foo-Bar');
-//=> fooBar
-
-camelCase('--foo.bar');
-//=> fooBar
-
-camelCase('__foo__bar__');
-//=> fooBar
-
-camelCase('foo bar');
-//=> fooBar
-
-console.log(process.argv[3]);
-//=> --foo-bar
-camelCase(process.argv[3]);
-//=> fooBar
-
-camelCase('foo', 'bar');
-//=> fooBar
-
-camelCase('__foo__', '--bar');
-//=> fooBar
+decamelize('unicornRainbow', '-');
+//=> 'unicorn-rainbow'
 ```
+
+
+## API
+
+### decamelize(input, [separator])
+
+#### input
+
+Type: `string`
+
+#### separator
+
+Type: `string`<br>
+Default: `_`
 
 
 ## Related
 
-See [`decamelize`](https://github.com/sindresorhus/decamelize) for the inverse.
+See [`camelcase`](https://github.com/sindresorhus/camelcase) for the inverse.
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

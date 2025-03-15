@@ -1,82 +1,36 @@
-3.0.0 / 2017-08-31
+0.1.7 / 2015-07-28
 ==================
 
-  * Change "kB" to "KB" in format output
-  * Remove support for Node.js 0.6
-  * Remove support for ComponentJS
+  * Fixed regression with escaped round brackets and matching groups.
 
-2.5.0 / 2017-03-24
+0.1.6 / 2015-06-19
 ==================
 
-  * Add option "unit"
+  * Replace `index` feature by outputting all parameters, unnamed and named.
 
-2.4.0 / 2016-06-01
+0.1.5 / 2015-05-08
 ==================
 
-  * Add option "unitSeparator"
+  * Add an index property for position in match result.
 
-2.3.0 / 2016-02-15
+0.1.4 / 2015-03-05
 ==================
 
-  * Drop partial bytes on all parsed units
-  * Fix non-finite numbers to `.format` to return `null`
-  * Fix parsing byte string that looks like hex
-  * perf: hoist regular expressions
+  * Add license information
 
-2.2.0 / 2015-11-13
+0.1.3 / 2014-07-06
 ==================
 
-  * add option "decimalPlaces"
-  * add option "fixedDecimals"
+  * Better array support
+  * Improved support for trailing slash in non-ending mode
 
-2.1.0 / 2015-05-21
+0.1.0 / 2014-03-06
 ==================
 
-  * add `.format` export
-  * add `.parse` export
+  * add options.end
 
-2.0.2 / 2015-05-20
+0.0.2 / 2013-02-10
 ==================
 
-  * remove map recreation
-  * remove unnecessary object construction
-
-2.0.1 / 2015-05-07
-==================
-
-  * fix browserify require
-  * remove node.extend dependency
-
-2.0.0 / 2015-04-12
-==================
-
-  * add option "case"
-  * add option "thousandsSeparator"
-  * return "null" on invalid parse input
-  * support proper round-trip: bytes(bytes(num)) === num
-  * units no longer case sensitive when parsing
-
-1.0.0 / 2014-05-05
-==================
-
- * add negative support. fixes #6
-
-0.3.0 / 2014-03-19
-==================
-
- * added terabyte support
-
-0.2.1 / 2013-04-01
-==================
-
-  * add .component
-
-0.2.0 / 2012-10-28
-==================
-
-  * bytes(200).should.eql('200b')
-
-0.1.0 / 2012-07-04
-==================
-
-  * add bytes to string conversion [yields]
+  * Update to match current express
+  * add .license property to component.json

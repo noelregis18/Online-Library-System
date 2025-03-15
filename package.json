@@ -1,76 +1,59 @@
 {
-  "_from": "content-type@~1.0.4",
-  "_id": "content-type@1.0.4",
+  "_from": "path-to-regexp@0.1.7",
+  "_id": "path-to-regexp@0.1.7",
   "_inBundle": false,
-  "_integrity": "sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==",
-  "_location": "/content-type",
+  "_integrity": "sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=",
+  "_location": "/path-to-regexp",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "content-type@~1.0.4",
-    "name": "content-type",
-    "escapedName": "content-type",
-    "rawSpec": "~1.0.4",
+    "raw": "path-to-regexp@0.1.7",
+    "name": "path-to-regexp",
+    "escapedName": "path-to-regexp",
+    "rawSpec": "0.1.7",
     "saveSpec": null,
-    "fetchSpec": "~1.0.4"
+    "fetchSpec": "0.1.7"
   },
   "_requiredBy": [
-    "/body-parser",
     "/express"
   ],
-  "_resolved": "https://registry.npmjs.org/content-type/-/content-type-1.0.4.tgz",
-  "_shasum": "e138cc75e040c727b1966fe5e5f8c9aee256fe3b",
-  "_spec": "content-type@~1.0.4",
-  "_where": "/home/shruti/Desktop/webd-project/hehe/node_modules/body-parser",
-  "author": {
-    "name": "Douglas Christopher Wilson",
-    "email": "doug@somethingdoug.com"
-  },
+  "_resolved": "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.7.tgz",
+  "_shasum": "df604178005f522f15eb4490e7247a1bfaa67f8c",
+  "_spec": "path-to-regexp@0.1.7",
+  "_where": "/home/shruti/Desktop/webd-project/hehe/node_modules/express",
   "bugs": {
-    "url": "https://github.com/jshttp/content-type/issues"
+    "url": "https://github.com/component/path-to-regexp/issues"
   },
   "bundleDependencies": false,
-  "deprecated": false,
-  "description": "Create and parse HTTP Content-Type header",
-  "devDependencies": {
-    "eslint": "3.19.0",
-    "eslint-config-standard": "10.2.1",
-    "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-node": "5.1.1",
-    "eslint-plugin-promise": "3.5.0",
-    "eslint-plugin-standard": "3.0.1",
-    "istanbul": "0.4.5",
-    "mocha": "~1.21.5"
+  "component": {
+    "scripts": {
+      "path-to-regexp": "index.js"
+    }
   },
-  "engines": {
-    "node": ">= 0.6"
+  "deprecated": false,
+  "description": "Express style path to RegExp utility",
+  "devDependencies": {
+    "istanbul": "^0.2.6",
+    "mocha": "^1.17.1"
   },
   "files": [
-    "LICENSE",
-    "HISTORY.md",
-    "README.md",
-    "index.js"
+    "index.js",
+    "LICENSE"
   ],
-  "homepage": "https://github.com/jshttp/content-type#readme",
+  "homepage": "https://github.com/component/path-to-regexp#readme",
   "keywords": [
-    "content-type",
-    "http",
-    "req",
-    "res",
-    "rfc7231"
+    "express",
+    "regexp"
   ],
   "license": "MIT",
-  "name": "content-type",
+  "name": "path-to-regexp",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jshttp/content-type.git"
+    "url": "git+https://github.com/component/path-to-regexp.git"
   },
   "scripts": {
-    "lint": "eslint .",
-    "test": "mocha --reporter spec --check-leaks --bail test/",
-    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/"
+    "test": "istanbul cover _mocha -- -R spec"
   },
-  "version": "1.0.4"
+  "version": "0.1.7"
 }

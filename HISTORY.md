@@ -1,118 +1,247 @@
-0.3.1 / 2016-05-26
+2.3.2 / 2017-09-09
 ==================
 
-  * Fix `sameSite: true` to work with draft-7 clients
-    - `true` now sends `SameSite=Strict` instead of `SameSite`
+  * deps: iconv-lite@0.4.19
+    - Fix ISO-8859-1regression
+    - Update Windows-1255
 
-0.3.0 / 2016-05-26
+2.3.1 / 2017-09-07
 ==================
 
-  * Add `sameSite` option
-    - Replaces `firstPartyOnly` option, never implemented by browsers
-  * Improve error message when `encode` is not a function
-  * Improve error message when `expires` is not a `Date`
+  * deps: bytes@3.0.0
+  * deps: http-errors@1.6.2
+    - deps: depd@1.1.1
+  * perf: skip buffer decoding on overage chunk
 
-0.2.4 / 2016-05-20
+2.3.0 / 2017-08-04
 ==================
 
-  * perf: enable strict mode
-  * perf: use for loop in parse
-  * perf: use string concatination for serialization
+  * Add TypeScript definitions
+  * Use `http-errors` for standard emitted errors
+  * deps: bytes@2.5.0
+  * deps: iconv-lite@0.4.18
+    - Add support for React Native
+    - Add a warning if not loaded as utf-8
+    - Fix CESU-8 decoding in Node.js 8
+    - Improve speed of ISO-8859-1 encoding
 
-0.2.3 / 2015-10-25
+2.2.0 / 2017-01-02
 ==================
 
-  * Fix cookie `Max-Age` to never be a floating point number
+  * deps: iconv-lite@0.4.15
+    - Added encoding MS-31J
+    - Added encoding MS-932
+    - Added encoding MS-936
+    - Added encoding MS-949
+    - Added encoding MS-950
+    - Fix GBK/GB18030 handling of Euro character
 
-0.2.2 / 2015-09-17
+2.1.7 / 2016-06-19
 ==================
 
-  * Fix regression when setting empty cookie value
-    - Ease the new restriction, which is just basic header-level validation
-  * Fix typo in invalid value errors
+  * deps: bytes@2.4.0
+  * perf: remove double-cleanup on happy path
 
-0.2.1 / 2015-09-17
+2.1.6 / 2016-03-07
 ==================
 
-  * Throw on invalid values provided to `serialize`
-    - Ensures the resulting string is a valid HTTP header value
+  * deps: bytes@2.3.0
+    - Drop partial bytes on all parsed units
+    - Fix parsing byte string that looks like hex
 
-0.2.0 / 2015-08-13
+2.1.5 / 2015-11-30
 ==================
 
-  * Add `firstPartyOnly` option
-  * Throw better error for invalid argument to parse
-  * perf: hoist regular expression
+  * deps: bytes@2.2.0
+  * deps: iconv-lite@0.4.13
 
-0.1.5 / 2015-09-17
+2.1.4 / 2015-09-27
 ==================
 
-  * Fix regression when setting empty cookie value
-    - Ease the new restriction, which is just basic header-level validation
-  * Fix typo in invalid value errors
+  * Fix masking critical errors from `iconv-lite`
+  * deps: iconv-lite@0.4.12
+    - Fix CESU-8 decoding in Node.js 4.x
 
-0.1.4 / 2015-09-17
+2.1.3 / 2015-09-12
 ==================
 
-  * Throw better error for invalid argument to parse
-  * Throw on invalid values provided to `serialize`
-    - Ensures the resulting string is a valid HTTP header value
+  * Fix sync callback when attaching data listener causes sync read
+    - Node.js 0.10 compatibility issue
 
-0.1.3 / 2015-05-19
+2.1.2 / 2015-07-05
 ==================
 
-  * Reduce the scope of try-catch deopt
-  * Remove argument reassignments
+  * Fix error stack traces to skip `makeError`
+  * deps: iconv-lite@0.4.11
+    - Add encoding CESU-8
 
-0.1.2 / 2014-04-16
+2.1.1 / 2015-06-14
 ==================
 
-  * Remove unnecessary files from npm package
+  * Use `unpipe` module for unpiping requests
 
-0.1.1 / 2014-02-23
+2.1.0 / 2015-05-28
 ==================
 
-  * Fix bad parse when cookie value contained a comma
-  * Fix support for `maxAge` of `0`
+  * deps: iconv-lite@0.4.10
+    - Improved UTF-16 endianness detection
+    - Leading BOM is now removed when decoding
+    - The encoding UTF-16 without BOM now defaults to UTF-16LE when detection fails
 
-0.1.0 / 2013-05-01
+2.0.2 / 2015-05-21
 ==================
 
-  * Add `decode` option
-  * Add `encode` option
+  * deps: bytes@2.1.0
+    - Slight optimizations
 
-0.0.6 / 2013-04-08
+2.0.1 / 2015-05-10
 ==================
 
-  * Ignore cookie parts missing `=`
+  * Fix a false-positive when unpiping in Node.js 0.8
 
-0.0.5 / 2012-10-29
+2.0.0 / 2015-05-08
 ==================
 
-  * Return raw cookie value if value unescape errors
+  * Return a promise without callback instead of thunk
+  * deps: bytes@2.0.1
+    - units no longer case sensitive when parsing
 
-0.0.4 / 2012-06-21
+1.3.4 / 2015-04-15
 ==================
 
-  * Use encode/decodeURIComponent for cookie encoding/decoding
-    - Improve server/client interoperability
+  * Fix hanging callback if request aborts during read
+  * deps: iconv-lite@0.4.8
+    - Add encoding alias UNICODE-1-1-UTF-7
 
-0.0.3 / 2012-06-06
+1.3.3 / 2015-02-08
 ==================
 
-  * Only escape special characters per the cookie RFC
+  * deps: iconv-lite@0.4.7
+    - Gracefully support enumerables on `Object.prototype`
 
-0.0.2 / 2012-06-01
+1.3.2 / 2015-01-20
 ==================
 
-  * Fix `maxAge` option to not throw error
+  * deps: iconv-lite@0.4.6
+    - Fix rare aliases of single-byte encodings
 
-0.0.1 / 2012-05-28
+1.3.1 / 2014-11-21
 ==================
 
-  * Add more tests
+  * deps: iconv-lite@0.4.5
+    - Fix Windows-31J and X-SJIS encoding support
 
-0.0.0 / 2012-05-28
+1.3.0 / 2014-07-20
+==================
+
+  * Fully unpipe the stream on error
+    - Fixes `Cannot switch to old mode now` error on Node.js 0.10+
+
+1.2.3 / 2014-07-20
+==================
+
+  * deps: iconv-lite@0.4.4
+    - Added encoding UTF-7
+
+1.2.2 / 2014-06-19
+==================
+
+  * Send invalid encoding error to callback
+
+1.2.1 / 2014-06-15
+==================
+
+  * deps: iconv-lite@0.4.3
+    - Added encodings UTF-16BE and UTF-16 with BOM
+
+1.2.0 / 2014-06-13
+==================
+
+  * Passing string as `options` interpreted as encoding
+  * Support all encodings from `iconv-lite`
+
+1.1.7 / 2014-06-12
+==================
+
+  * use `string_decoder` module from npm
+
+1.1.6 / 2014-05-27
+==================
+
+  * check encoding for old streams1
+  * support node.js < 0.10.6
+
+1.1.5 / 2014-05-14
+==================
+
+  * bump bytes
+
+1.1.4 / 2014-04-19
+==================
+
+  * allow true as an option
+  * bump bytes
+
+1.1.3 / 2014-03-02
+==================
+
+  * fix case when length=null
+
+1.1.2 / 2013-12-01
+==================
+
+  * be less strict on state.encoding check
+
+1.1.1 / 2013-11-27
+==================
+
+  * add engines
+
+1.1.0 / 2013-11-27
+==================
+
+  * add err.statusCode and err.type
+  * allow for encoding option to be true
+  * pause the stream instead of dumping on error
+  * throw if the stream's encoding is set
+
+1.0.1 / 2013-11-19
+==================
+
+  * dont support streams1, throw if dev set encoding
+
+1.0.0 / 2013-11-17
+==================
+
+  * rename `expected` option to `length`
+
+0.2.0 / 2013-11-15
+==================
+
+  * republish
+
+0.1.1 / 2013-11-15
+==================
+
+  * use bytes
+
+0.1.0 / 2013-11-11
+==================
+
+  * generator support
+
+0.0.3 / 2013-10-10
+==================
+
+  * update repo
+
+0.0.2 / 2013-09-14
+==================
+
+  * dump stream on bad headers
+  * listen to events after defining received and buffers
+
+0.0.1 / 2013-09-14
 ==================
 
   * Initial release
